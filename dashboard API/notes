@@ -1,0 +1,58 @@
+/**
+ * Challenge: get a random image from Unsplash and set it as the background
+ * 
+ * Part 1:
+ * 
+ * URL: https://apis.scrimba.com/unsplash/photos/random?orientation=landscape&query=nature
+ * (You can change the "query" at the end to whatever theme you want)
+ * 
+ * Change the body's backgroundImage to: 
+ * `url(<insert the URL of the iamge from the API here>)`
+ * 
+ * (You may need to dig around the response body a bit to find this URL)
+ * 
+ * (Note I've already added some CSS to resize the image within the window.
+ * Instructions for this were found on CSS Tricks: 
+ * https://css-tricks.com/perfect-full-page-background-image/#awesome-easy-progressive-css3-way)
+ */
+ Resolved promises quiz
+
+/*1. What is a promise (in your own words)?
+A promise that an operation that normally takes a bit of time
+will eventually finish running. I.O.U. (I owe you)
+
+2. Which part of the code we have so far is a promise?
+The fetch request returns a promise object.
+
+3. What are the three states a promise can be in?
+(1) Pending, (2) Resolved (fulfilled), (3) Rejected
+
+4. What does it mean when a promise is "resolved" (or fulfilled)?
+The task we wanted to perform finished successfully.
+
+5. How do we tell the code to do something only AFTER a
+   promise is resolved?
+.then() method
+
+?? - How do we handle a promise that has been rejected?
+when an error occurs on .then() whhile fetching data
+for notification
+.catch(err => {
+        console.log("Something went wrong! 😭")
+        // This is where I can handle the error
+        // Choose to use a default background image
+    })
+    handling error code
+    fetch("https://api.coingecko.com/api/v3/coins/dogecoin")
+    .then(res => {
+        if (!res.ok) {
+            throw Error("Something went wrong")
+        }
+        console.log(res.status)
+        return res.json()
+    })
+    .then(data => {
+        console.log(data)
+    })
+    .catch(err => console.error(err))
+*/
